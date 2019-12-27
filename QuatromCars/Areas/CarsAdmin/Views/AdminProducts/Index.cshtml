@@ -1,0 +1,69 @@
+﻿@model IEnumerable<QuatromCars.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/CarsAdmin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+
+        <th>
+            Model
+            @Html.DisplayNameFor(model => model.Model.Name)
+        </th>
+        <th>
+            Marka
+            @Html.DisplayNameFor(model => model.Model.Marka.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PriceType.prcTypeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductionDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Photo)
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Model.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Model.Marka.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Price)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PriceType.prcTypeName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ProductionDate)
+    </td>
+    <td style="width:25%">
+        <img class="img-thumbnail" src="@item.Photo" />
+    </td>
+
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+        @Html.ActionLink("Details", "Details", new { id = item.id }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.id })
+    </td>
+</tr>
+}
+
+</table>

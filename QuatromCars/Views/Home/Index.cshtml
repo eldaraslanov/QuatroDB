@@ -1,0 +1,813 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@using QuatromCars.Models
+@model QuatromCars.ViewModels.homeVm
+
+<div class="home-template">
+    <div class="container-fluid" >
+        <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true"
+             class="vc_row wpb_row vc_row-fluid pix-top-no-padding pix-bottom-no-padding default vc_row-no-padding">
+            <div class="wpb_column vc_column_container vc_col-sm-12">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper">
+                        <!-- START Home 1 REVOLUTION SLIDER 6.1.5 -->
+                        <p class="rs-p-wp-fix"></p>
+                        <rs-module-wrap id="rev_slider_5_1_wrapper" data-source="gallery"
+                                        style="background:#262626;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
+                            <rs-module id="rev_slider_5_1" style="display:none;" data-version="6.1.5">
+                                <rs-slides>
+                                    @{
+
+                                        int slideCount = 13;
+                                    }
+                                    @foreach (var item in Model.slider)
+                                    {
+                                        <rs-slide data-key="rs-@(slideCount)" data-title="Slide"
+                                                  data-thumb="//quattro.true-emotions.studio/black/wp-content/uploads/sites/3/2019/01/audi-r8-100x50.jpg"
+                                                  data-anim="ei:d;eo:d;s:600;r:0;t:fade;sl:d;">
+                                            <img src="@item.SliderPhoto" title="Home"
+                                                 data-panzoom="d:10000;ss:100;se:102;" class="rev-slidebg"
+                                                 data-no-retina>
+                                            <!--
+                                        -->
+                                            <p id="slider-5-slide-@(slideCount)-layer-1" class="rs-layer" data-type="text"
+                                               data-rsp_ch="on"
+                                               data-xy="x:l,l,c,c;xo:1px,39px,-185px,0;yo:251px,326px,316px,261px;"
+                                               data-text="w:normal;s:20,24,24,24;l:35;fw:600,600,800,600;a:inherit,inherit,left,center;"
+                                               data-dim="w:260px,300px,297px,350px;h:47px,auto,46px,auto;"
+                                               data-padding="t:5,5,5,0;r:5,5,5,0;b:5,5,5,0;l:18,15,15,0;"
+                                               data-frame_0="y:100%;tp:600;" data-frame_0_mask="u:t;y:100%;"
+                                               data-frame_1="tp:600;e:Power2.easeInOut;sp:2000;sR:10;"
+                                               data-frame_1_mask="u:t;" data-frame_999="o:0;tp:600;st:w;sR:3990;"
+                                               style="z-index:5;background-color:#ff3837;font-family:Poppins;">
+                                                @item.Header
+                                            </p>
+                                            <!--
+
+                                        -->
+                                            <rs-layer id="slider-5-slide-@(slideCount)-layer-4" class="rev-btn"
+                                                      data-type="button" data-color="#ffffff||#ffffff||#ffffff||#000000"
+                                                      data-xy="x:l,l,c,c;xo:4px,208px,-84px,372px;yo:469px,539px,515px,562px;"
+                                                      data-text="s:15;l:17;fw:700,800,700,500;a:inherit;"
+                                                      data-rsp_bd="off"
+                                                      data-padding="t:18;r:34,40,40,40;b:20;l:34,40,40,40;"
+                                                      data-border="bor:5px,5px,5px,5px;" data-frame_0="y:100%;tp:600;"
+                                                      data-frame_0_mask="u:t;y:100%;"
+                                                      data-frame_1="tp:600;e:Power2.easeInOut;sp:2000;sR:10;"
+                                                      data-frame_1_mask="u:t;" data-frame_999="o:0;tp:600;st:w;sR:5690;"
+                                                      data-frame_hover="c:#fff;bgc:#444;boc:#000;bor:5px,5px,5px,5px;bos:solid;oX:50;oY:50;sp:0;"
+                                                      style="z-index:6;background-color:rgba(255,255,255,0.15);font-family:Poppins;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;">
+                                                read more
+                                            </rs-layer>
+                                            <!--
+
+                                        -->
+                                            <p id="slider-5-slide-@(slideCount)-layer-7" class="rs-layer" data-type="text"
+                                               data-rsp_ch="on"
+                                               data-xy="x:l,l,c,c;xo:-2px,36px,-18px,467px;yo:310px,396px,379px,347px;"
+                                               data-text="w:normal;s:80,85,75,70;l:100,70,70,65;fw:800;a:inherit,inherit,left,center;"
+                                               data-dim="w:643px,739px,634px,350px;h:102px,auto,141px,auto;"
+                                               data-frame_0="y:100%;tp:600;" data-frame_0_mask="u:t;y:100%;"
+                                               data-frame_1="tp:600;e:Power2.easeInOut;sp:2000;sR:10;"
+                                               data-frame_1_mask="u:t;" data-frame_999="o:0;tp:600;st:w;sR:3990;"
+                                               style="z-index:7;font-family:Poppins;">
+                                                @item.SubDescriptions
+                                            </p>
+                                            <!--
+
+                                        -->
+                                            <p id="slider-5-slide-@(slideCount)-layer-10" class="rs-layer" data-type="text"
+                                               data-rsp_ch="on"
+                                               data-xy="x:l,l,c,c;xo:0,41px,-65px,0;yo:372px,457px,437px,308px;"
+                                               data-text="w:normal;s:30,30,30,70;l:100,70,70,65;fw:800;a:inherit,inherit,left,center;"
+                                               data-dim="w:564px,541px,535px,350px;h:102px,auto,auto,auto;"
+                                               data-frame_0="y:100%;tp:600;" data-frame_0_mask="u:t;y:100%;"
+                                               data-frame_1="tp:600;e:Power2.easeInOut;sp:2000;sR:10;"
+                                               data-frame_1_mask="u:t;" data-frame_999="o:0;tp:600;st:w;sR:3990;"
+                                               style="z-index:8;font-family:Poppins;">
+                                                @item.Descriptions
+                                            </p>
+                                            <!--
+
+                                        -->
+                                            <rs-layer id="slider-5-slide-@(slideCount)-layer-11" class="rev-btn"
+                                                      data-type="button" data-color="#ffffff||#ffffff||#ffffff||#000000"
+                                                      data-xy="x:l,l,c,c;xo:174px,41px,-257px,372px;yo:469px,538px,515px,562px;"
+                                                      data-text="s:15;l:17;fw:700,800,700,500;a:inherit;"
+                                                      data-rsp_bd="off" data-padding="t:18;r:40;b:20;l:40;"
+                                                      data-border="bor:5px,5px,5px,5px;" data-frame_0="y:100%;tp:600;"
+                                                      data-frame_0_mask="u:t;y:100%;"
+                                                      data-frame_1="tp:600;e:Power2.easeInOut;sp:2000;sR:10;"
+                                                      data-frame_1_mask="u:t;" data-frame_999="o:0;tp:600;st:w;sR:5690;"
+                                                      data-frame_hover="c:#fff;bgc:#ff3a2d;boc:#000;bor:5px,5px,5px,5px;bos:solid;oX:50;oY:50;sp:0;"
+                                                      style="z-index:9;background-color:rgba(255,255,255,0.15);font-family:Poppins;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;">
+                                                about us
+                                            </rs-layer>
+                                            <!--
+                                        -->
+                                        </rs-slide>
+                                        slideCount++;
+                                    }
+
+                                </rs-slides>
+                                <rs-progress class="rs-bottom" style="visibility: hidden !important;">
+                                </rs-progress>
+                            </rs-module>
+                            <script type="text/javascript">
+                                setREVStartSize({ c: 'rev_slider_5_1', rl: [1240, 1024, 778, 480], el: [], gw: [1300, 1024, 778, 480], gh: [870, 768, 960, 720], layout: 'fullwidth', mh: "0" });
+                                var revapi5,
+                                    tpj;
+                                jQuery(function () {
+                                    tpj = jQuery;
+                                    if (tpj("#rev_slider_5_1").revolution == undefined) {
+                                        revslider_showDoubleJqueryError("#rev_slider_5_1");
+                                    } else {
+                                        revapi5 = tpj("#rev_slider_5_1").show().revolution({
+                                            jsFileLocation: "//quattro.true-emotions.studio/black/wp-content/plugins/revslider/public/assets/js/",
+                                            sliderLayout: "fullwidth",
+                                            duration: 6000,
+                                            visibilityLevels: "1240,1024,778,480",
+                                            gridwidth: "1300,1024,778,480",
+                                            gridheight: "870,768,960,720",
+                                            minHeight: "",
+                                            responsiveLevels: "1240,1024,778,480",
+                                            disableProgressBar: "on",
+                                            navigation: {
+                                                mouseScrollNavigation: false,
+                                                onHoverStop: false,
+                                                bullets: {
+                                                    enable: true,
+                                                    tmp: "<span class=\"tp-bullet-inner\"></span>",
+                                                    style: "uranus",
+                                                    h_align: "right",
+                                                    v_align: "center",
+                                                    v_offset: 30,
+                                                    direction: "vertical",
+                                                    container: "layergrid"
+                                                }
+                                            },
+                                            fallbacks: {
+                                                allowHTML5AutoPlayOnAndroid: true
+                                            },
+                                        });
+                                    }
+
+                                });
+                            </script>
+                            <script>
+                                var htmlDivCss = unescape("%23rev_slider_5_1_wrapper%20.uranus%20.tp-bullet%7B%0A%20%20border-radius%3A%2050%25%3B%0A%20%20box-shadow%3A%200%200%200%202px%20rgba%28255%2C255%2C255%2C0%29%3B%0A%20%20-webkit-transition%3A%20box-shadow%200.3s%20ease%3B%0A%20%20transition%3A%20box-shadow%200.3s%20ease%3B%0A%20%20background%3Atransparent%3B%0A%20%20width%3A15px%3B%0A%20%20height%3A15px%3B%0A%7D%0A%23rev_slider_5_1_wrapper%20.uranus%20.tp-bullet.selected%2C%0A%23rev_slider_5_1_wrapper%20.uranus%20.tp-bullet%3Ahover%20%7B%0A%20%20box-shadow%3A%200%200%200%202px%20rgba%28255%2C255%2C255%2C1%29%3B%0A%20%20border%3Anone%3B%0A%20%20border-radius%3A%2050%25%3B%0A%20%20background%3Atransparent%3B%0A%7D%0A%0A%23rev_slider_5_1_wrapper%20.uranus%20.tp-bullet-inner%20%7B%0A%20%20-webkit-transition%3A%20background-color%200.3s%20ease%2C%20-webkit-transform%200.3s%20ease%3B%0A%20%20transition%3A%20background-color%200.3s%20ease%2C%20transform%200.3s%20ease%3B%0A%20%20top%3A%200%3B%0A%20%20left%3A%200%3B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%20%20outline%3A%20none%3B%0A%20%20border-radius%3A%2050%25%3B%0A%20%20background-color%3A%20rgba%28255%2C255%2C255%2C0%29%3B%0A%20%20background-color%3A%20rgba%28255%2C255%2C255%2C0.3%29%3B%0A%20%20text-indent%3A%20-999em%3B%0A%20%20cursor%3A%20pointer%3B%0A%20%20position%3A%20absolute%3B%0A%7D%0A%0A%23rev_slider_5_1_wrapper%20.uranus%20.tp-bullet.selected%20.tp-bullet-inner%2C%0A%23rev_slider_5_1_wrapper%20.uranus%20.tp-bullet%3Ahover%20.tp-bullet-inner%7B%0A%20transform%3A%20scale%280.4%29%3B%0A%20-webkit-transform%3A%20scale%280.4%29%3B%0A%20background-color%3Argba%28255%2C255%2C255%2C1%29%3B%0A%7D%0A");
+                                var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+                                if (htmlDiv) {
+                                    htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+                                } else {
+                                    var htmlDiv = document.createElement('div');
+                                    htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+                                    document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+                                }
+                            </script>
+                            <script>
+                                var htmlDivCss = unescape("%0A%0A%0A%0A");
+                                var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+                                if (htmlDiv) {
+                                    htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+                                } else {
+                                    var htmlDiv = document.createElement('div');
+                                    htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+                                    document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+                                }
+                            </script>
+                        </rs-module-wrap>
+                        <!-- END REVOLUTION SLIDER -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vc_row-full-width vc_clearfix"></div>
+        <div data-vc-full-width="true" data-vc-full-width-init="false"
+             class="vc_row wpb_row vc_row-fluid pix-padding-top-l pix-padding-bottom-l pix-row-overflow pix-top-offset_1464470471 text-white-color text-shadow default vc_custom_1574427412303 vc_row-has-fill">
+            <span class="vc_row-overlay" style="background-color: rgba(0,0,0,0.9) !important;"></span>
+            <div class="wpb_column vc_column_container vc_col-sm-12">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper">
+                        <div class="pix-filter-box">
+                            <div class="pix-filter-col">
+                                <div class="pix-filter-row">
+
+                                    <select id="ajax-make" class="pix-count" name="ajax-make" data-type="select"
+                                            data-field="make">
+                                        <option value="">Select Car Make</option>
+                                        <option value="audi">Audi</option>
+                                        <option value="bmw">BMW</option>
+                                        <option value="ferrari">Ferrari</option>
+                                        <option value="hyundai">Hyundai</option>
+                                        <option value="lincoln">Lincoln</option>
+                                        <option value="mercedes">Mercedes</option>
+                                        <option value="range-rover">Range Rover</option>
+                                        <option value="toyota">Toyota</option>
+                                        <option value="volkswagen">Volkswagen</option>
+                                    </select>
+                                </div>
+                                <div class="pix-filter-row">
+
+                                    <select class="pixcars-filter pix-count" data-type="select"
+                                            data-field="fuel">
+                                        <option value="">Select Fuel</option>
+                                        <option value="diesel">Diesel</option>
+                                        <option value="petrol">Petrol</option>
+                                        <option value="hybrid">Hybrid</option>
+                                        <option value="electric">Electric</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="pix-filter-col">
+                                <div class="pix-filter-row">
+
+                                    <select class="pixcars-filter pix-count" id="pixcars-model"
+                                            name="pixcars-model" data-type="select" data-field="model">
+                                        <option value="">Select Car Model</option>
+                                    </select>
+                                </div>
+                                <div class="pix-filter-row">
+
+                                    <select class="pixcars-filter pix-count" data-type="select"
+                                            data-field="transmission">
+                                        <option value="">Select Transmission</option>
+                                        <option value="automatic">Automatic</option>
+                                        <option value="manual">Manual</option>
+                                        <option value="semi-automatic">Semi-Automatic</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="pix-filter-col">
+                                <div class="pix-filter-row">
+
+                                    <div class="pix-range-box">
+                                        <div class="pix-slider-range" data-min="1970" data-max="2020"
+                                             data-step="1"></div>
+                                        <div class="clearfix">
+                                            <div class="pix-first-value"></div>
+                                            <div class="pix-last-value"></div>
+                                        </div>
+                                        <div class="pix-range-title">Years</div>
+                                        <input type="hidden" class="pix-min pixcars-filter pix-count"
+                                               data-type="number" data-field="years" value="">
+                                        <input type="hidden" class="pix-max pixcars-filter pix-count"
+                                               data-type="number" data-field="years" value="">
+                                    </div>
+                                </div>
+                                <div class="pix-filter-row">
+
+                                    <div class="pix-range-box">
+                                        <div class="pix-slider-range" data-min="0" data-max="7" data-step="0.1">
+                                        </div>
+                                        <div class="clearfix">
+                                            <div class="pix-first-value"></div>
+                                            <div class="pix-last-value"></div>
+                                        </div>
+                                        <div class="pix-range-title">Engine Capacity</div>
+                                        <input type="hidden" class="pix-min pixcars-filter pix-count"
+                                               data-type="number" data-field="engine" value="">
+                                        <input type="hidden" class="pix-max pixcars-filter pix-count"
+                                               data-type="number" data-field="engine" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pix-filter-col">
+                                <div class="pix-filter-row">
+
+                                    <div class="pix-range-box">
+                                        <div class="pix-slider-range" data-min="0" data-max="100000"
+                                             data-step="1000" data-unit="&#036;" data-unit-pos="left"></div>
+                                        <div class="clearfix">
+                                            <div class="pix-first-value"></div>
+                                            <div class="pix-last-value"></div>
+                                        </div>
+                                        <div class="pix-range-title">Price</div>
+                                        <input type="hidden" class="pix-min pixcars-filter pix-count"
+                                               data-type="number" data-field="price" value="">
+                                        <input type="hidden" class="pix-max pixcars-filter pix-count"
+                                               data-type="number" data-field="price" value="">
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <a href="sample-page/index.html" class="pix-button pix-h-xl"
+                                       data-page="https://quattro.true-emotions.studio/black/sample-page/"
+                                       data-href="">Show Cars <span></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vc_row-full-width vc_clearfix"></div>
+        <div data-vc-full-width="true" data-vc-full-width-init="false"
+             class="vc_row wpb_row vc_row-fluid pt-4 pb-4 text-white-color text-shadow default vc_custom_1574427827951 vc_row-has-fill">
+            <span class="vc_row-overlay" style="background-color: rgba(0,0,0,0.9) !important;"></span>
+            <div class="wpb_column vc_column_container vc_col-sm-12">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper">
+                        <div class="pix-section-title pix-l pix-title-no-padding text-left default">
+
+                            <h2 class="pix-title-h2  ">YENİ ELANLAR<span class="sep-element"></span></h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vc_row-full-width vc_clearfix"></div>
+        <section id="section3">
+            <div class="container-fluid p-0 m-0">
+                <div class="col-md-12 p-0">
+                    <div class="secondSlick">
+                        @foreach (var procr in Model.products)
+                        {
+                            <div class="CarsImg mt-3 p-3">
+                                <div class="booking-img">
+                                    <img style="height:285px; object-fit:contain" src="@procr.Photo"
+                                         alt="">
+                                    <a href="#" class="all-booking text-left">
+                                        <div class="bookprice">
+                                            <span class="m-3">@procr.Price @procr.PriceType.prcTypeName</span>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="CarsPanel mb-2">
+                                    <div class="box-info">@procr.ProductionDate</div>
+                                    <div class="box-info">1000 <span>km</span></div>
+                                    <div class="box-info">@procr.FuelType.FuelName</div>
+                                    <div class="box-info">@procr.Transmission.TypeName</div>
+                                </div>
+                                <div class="firm text-center" style="width:100%">
+                                    <a style="text-align:center;" href="#">
+                                        @*@procr.Model.Marka.Name*@
+                                    </a>
+                                </div>
+                            </div>
+
+                        }
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section3">
+            <div class="container-fluid p-0 m-0">
+                <div class="col-md-12 p-0">
+                    <div class="secondSlick">
+                        @foreach (var procr in Model.products)
+                        {
+                            <div class="CarsImg mt-5 p-3">
+                                <div class="booking-img">
+                                    <img style="height:293px; object-fit:contain" src="@procr.Photo"
+                                         alt="">
+                                    <a href="#" class="all-booking text-left">
+                                        <div class="bookprice">
+                                            <span class="m-3">@procr.Price @procr.PriceType.prcTypeName</span>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="CarsPanel mb-2">
+                                    <div class="box-info">@procr.ProductionDate</div>
+                                    <div class="box-info">1000 <span>km</span></div>
+                                    <div class="box-info">@procr.FuelType.FuelName</div>
+                                    <div class="box-info">@procr.Transmission.TypeName</div>
+                                </div>
+                                <div class="firm text-center" style="width:100%">
+                                    <a style="text-align:center;" href="#">
+                                        @*@procr.Model.Marka.Name*@
+                                    </a>
+                                </div>
+                            </div>
+
+                        }
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section3">
+            <div class="container-fluid p-0 m-0">
+                <div class="col-md-12 p-0">
+                    <div class="secondSlick">
+                        @foreach (var procr in Model.products)
+                        {
+                            <div class="CarsImg mt-5 p-3">
+                                <div class="booking-img">
+                                    <img style="height:293px; object-fit:contain" src="@procr.Photo"
+                                         alt="">
+                                    <a href="#" class="all-booking text-left">
+                                        <div class="bookprice">
+                                            <span class="m-3">@procr.Price @procr.PriceType.prcTypeName</span>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="CarsPanel mb-2">
+                                    <div class="box-info">@procr.ProductionDate</div>
+                                    <div class="box-info">1000 <span>km</span></div>
+                                    <div class="box-info">@procr.FuelType.FuelName</div>
+                                    <div class="box-info">@procr.Transmission.TypeName</div>
+                                </div>
+                                <div class="firm text-center" style="width:100%">
+                                    <a style="text-align:center;" href="#">
+                                        @*@procr.Model.Marka.Name*@
+                                    </a>
+                                </div>
+                            </div>
+
+                        }
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        @*<div class="vc_row-full-width vc_clearfix"></div>
+        <div class="vc_row wpb_row vc_row-fluid pix-top-no-padding pix-bottom-no-padding default vc_custom_1550303735668">
+            <div class="wpb_column vc_column_container vc_col-sm-12 vc_hidden-xs vc_col-has-fill">
+                <div class="vc_column-inner vc_custom_1547293331618">
+                    <div class="wpb_wrapper">
+                        <div class="pix-brand-box owl-carousel owl-theme owl-theme "
+                             data-owl-options='{"items":"9","dots":false,"nav":false,"loop":false,"margin":60,"stagePadding":45,"navSpeed":"1000","dotsSpeed":"1000","autoplay":true,"autoplaySpeed":"1000","autoWidth":false,"responsiveClass":true,"responsive":{"0":{"items":1,"margin":0,"stagePadding":0,"autoWidth":false},"480":{"items":2,"margin":0,"stagePadding":0,"autoWidth":false},"768":{"items":9,"margin":60,"stagePadding":45,"autoWidth":false}},"navText":["&lt;i class=\"icon-arrow-left\"&gt;&lt;\/i&gt;","&lt;i class=\"icon-arrow-right\"&gt;&lt;\/i&gt;"]}'>
+
+                            <div class="item pix-logo-img">
+                                <a href="#"><img src="~/PublicFront//wp-content/uploads/sites/3/2019/01/nissan.svg" alt=""></a>
+                            </div>
+
+                            <div class="item pix-logo-img">
+                                <a href="#"><img src="~/PublicFront/wp-content/uploads/sites/3/2019/01/honda.svg" alt=""></a>
+                            </div>
+
+                            <div class="item pix-logo-img">
+                                <a href="#"><img src="~/PublicFront/wp-content/uploads/sites/3/2019/01/opel-2.svg" alt=""></a>
+                            </div>
+
+                            <div class="item pix-logo-img">
+                                <a href="#"><img src="~/PublicFront/wp-content/uploads/sites/3/2019/01/volvo.svg" alt=""></a>
+                            </div>
+
+                            <div class="item pix-logo-img">
+                                <a href="#">
+                                    <img src="~/PublicFront/wp-content/uploads/sites/3/2019/01/mercedes-benz-2.svg"
+                                         alt="">
+                                </a>
+                            </div>
+
+                            <div class="item pix-logo-img">
+                                <a href="#">
+                                    <img src="~/PublicFront/wp-content/uploads/sites/3/2019/01/mazda-2.svg"
+                                         alt="">
+                                </a>
+                            </div>
+
+                            <div class="item pix-logo-img">
+                                <a href="#"><img src="~/PublicFront/wp-content/uploads/sites/3/2019/01/bmw.svg" alt=""></a>
+                            </div>
+
+                            <div class="item pix-logo-img">
+                                <a href="#"><img src="wp-content/uploads/sites/3/2019/01/yamaha.svg" alt=""></a>
+                            </div>
+
+                            <div class="item pix-logo-img">
+                                <a href="#">
+                                    <img src="~/PublicFront/wp-content/uploads/sites/3/2019/01/volkswagen.svg"
+                                         alt="">
+                                </a>
+                            </div>
+
+                            <div class="item pix-logo-img">
+                                <a href="#"><img src="~/PublicFront/wp-content/uploads/sites/3/2019/01/honda.svg" alt=""></a>
+                            </div>
+
+                            <div class="item pix-logo-img">
+                                <a href="#"><img src="~/PublicFront/wp-content/uploads/sites/3/2019/01/bmw.svg" alt=""></a>
+                            </div>
+
+                            <div class="item pix-logo-img">
+                                <a href="#">
+                                    <img src="~/PublicFront/wp-content/uploads/sites/3/2019/01/mercedes-benz-2.svg"
+                                         alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+        <div class="nk-awb  nk-awb-after-vc_row ">
+            <div class="nk-awb-wrap" data-awb-type="color" data-awb-stretch="true"
+                 data-awb-image-background-size="cover" data-awb-image-background-position="50% 50%">
+                <div class="nk-awb-overlay" style="background-color: #111111;"></div>
+                <div class="nk-awb-inner"></div>
+            </div>
+        </div>
+
+        <div class="vc_row-full-width vc_clearfix"></div>
+
+
+
+
+        <div class="vc_row-full-width vc_clearfix"></div>
+        <div data-vc-full-width="true" data-vc-full-width-init="false"
+             class="vc_row wpb_row vc_row-fluid pix-padding-top-l pix-padding-bottom-l text-white-color text-shadow default vc_custom_1574427827951 vc_row-has-fill">
+            <span class="vc_row-overlay" style="background-color: rgba(0,0,0,0.9) !important;"></span>
+            <div class="wpb_column vc_column_container vc_col-sm-12">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper">
+                        <div class="pix-section-title pix-l pix-title-no-padding text-left default">
+
+                            <h2 class="pix-title-h2  ">Cars Gallery<span class="sep-element"></span></h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vc_row-full-width vc_clearfix"></div>
+        <div class="nk-awb  nk-awb-after-vc_row ">
+            <div class="nk-awb-wrap" data-awb-type="color" data-awb-stretch="true"
+                 data-awb-image-background-size="cover" data-awb-image-background-position="50% 50%">
+                <div class="nk-awb-overlay" style="background-color: #212121;"></div>
+                <div class="nk-awb-inner"></div>
+            </div>
+        </div>
+        <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true"
+             class="vc_row wpb_row vc_row-fluid pix-top-no-padding pix-bottom-no-padding pix-row-overflow pix-top-offset_1333724070 text-white-color text-shadow default vc_custom_1544643949891 vc_row-no-padding">
+            <div class="wpb_column vc_column_container vc_col-sm-12">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper">
+                        <section class="pix-carousel pix-cars-gallery pix-portfolio default ">
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="pix-section-top-line">
+                                            <div class="pix-cars-gallery-slider-controls">
+                                                <div class="pix-slider-prev"></div>
+                                                <div class="pix-slider-next"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pix-cars-gallery-slider owl-carousel">
+                                @foreach (var GalCa in Model.CarsGa)
+                                {
+                                    <div class="pix-cars-gallery-item">
+                                        <div class="pix-img-wrapper">
+                                            <img width="634" height="400"
+                                                 src="@GalCa.Photo"
+                                                 class="img-responsive wp-post-image" alt="" />
+                                        </div>
+                                        <div class="pix-gallery-item-info">
+                                            <div class="pix-gallery-item-title"><span>@GalCa.Description</span></div>
+                                            <div class="pix-gallery-item-name">
+                                                <a href="portfolio/maserati-granturismo/index.html">
+                                                    @GalCa.Header
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vc_row-full-width vc_clearfix"></div>
+        <div data-vc-full-width="true" data-vc-full-width-init="false"
+             class="vc_row wpb_row vc_row-fluid pix-padding-top-xl pix-bottom-no-padding default vc_custom_1574429953506 vc_row-has-fill">
+            <div class="wpb_column vc_column_container vc_col-sm-12">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper">
+                        <div class="pix-section-title pix-l text-left default">
+
+                            <h2 class="pix-title-h2  ">Cars Store<span class="sep-element"></span></h2>
+
+                        </div>
+                        <section class="pix-isotope pix-product default vc_custom_1545241270927">
+                            <div class="container">
+                                <div class="col-md-12 pix-text-right">
+                                    <div class="pix-filter-head">
+                                        <ul class="pix-filter">
+                                            <li class="active"><a href="#" data-filter="*">All</a></li>
+                                            <li><a href="#" data-filter=".engine-tuning">Engine Tuning</a></li>
+                                            <li><a href="#" data-filter=".performance">Performance</a></li>
+                                            <li><a href="#" data-filter=".sport">Sport</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio__container">
+                                <div class="pix-isotope-items gap-info pix-col-4">
+                                    <div class="pix-gutter-sizer"></div>
+                                    @foreach (var AvPa in Model.AvtoPa)
+                                    {
+                                        <div class="pix-isotope-item pix-store-box  performance wheels-accessories ">
+                                            <div class="pix-store-box-img">
+                                                <a href="product/wolfrace-wheels-pro-lite-eco-2-0-alloy-wheels-in-black-gloss-set-of-4/index.html">
+                                                    <div class="pix-img-wrapper">
+                                                        <img width="555" height="555"
+                                                             src="@AvPa.Photo"
+                                                             class="img-responsive wp-post-image" alt="" />
+                                                    </div>
+
+                                                </a>
+                                            </div>
+                                            <div class="pix-store-box-name">
+                                                <a href="product/wolfrace-wheels-pro-lite-eco-2-0-alloy-wheels-in-black-gloss-set-of-4/index.html">
+                                                    @AvPa.Name
+                                                </a>
+                                            </div>
+                                            <div class="pix-store-box-footer">
+                                                <div class="pix-store-box-buy">
+                                                    <a href="indexaaba.html?add-to-cart=296" rel="nofollow"
+                                                       data-product_id="296" data-product_sku="23445397"
+                                                       data-quantity="1"
+                                                       class="button ajax_add_to_cart add_to_cart_button product_type_simple">
+                                                        <span>
+                                                            Add
+                                                            to cart
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="pix-store-box-price">
+                                                    <span class="woocommerce-Price-amount amount">
+                                                        @*<span class="woocommerce-Price-currencySymbol">@AvPa.PriceType.TypeName@AvPa.Price</span>*@
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="vc_row-full-width vc_clearfix"></div>
+        <div data-vc-full-width="true" data-vc-full-width-init="false"
+             class="vc_row wpb_row vc_row-fluid pix-padding-top-xl pix-padding-bottom-xl text-white-color text-shadow default vc_custom_1574429971099 vc_row-has-fill">
+            <div class="wpb_column vc_column_container vc_col-sm-12">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper">
+                        <div class="pix-section-title pix-l text-left white-heading">
+
+                            <h2 class="pix-title-h2  ">News<span class="sep-element"></span></h2>
+
+                        </div>
+
+                        <div class="pix-news-slider row owl-carousel owl-theme default "
+                             data-owl-options='{"items":"3","dots":true,"nav":false,"loop":false,"margin":0,"stagePadding":0,"navSpeed":"1000","dotsSpeed":"1000","autoplay":false,"autoplaySpeed":"1000","autoWidth":false,"responsiveClass":true,"responsive":{"0":{"items":1,"margin":0,"stagePadding":0,"autoWidth":false},"480":{"items":2,"margin":0,"stagePadding":0,"autoWidth":false},"768":{"items":3,"margin":0,"stagePadding":0,"autoWidth":false}},"navText":["&lt;i class=\"icon-arrow-left\"&gt;&lt;\/i&gt;","&lt;i class=\"icon-arrow-right\"&gt;&lt;\/i&gt;"]}'>
+                            @foreach (var item in Model.News)
+                            {
+                                <div class="pix-news-item ">
+                                    <div class="pix-news-img">
+                                        <img width="400" height="400"
+                                             src="@item.NewPhoto"
+                                             class="attachment-400x400 size-400x400 wp-post-image" alt="" />
+                                    </div>
+                                    <div class="pix-news-info">
+                                        <div class="pix-news-author-date">
+                                            <a href="2018/11/11/ullamcorper-amet-feugiat-wisi-id-metus-ultrices-mauris-in-mattis/index.html">
+                                                @item.CreateDate
+                                            </a>
+                                        </div>
+                                        <div class="pix-ne  ws-title">
+                                            <a href="2018/11/11/ullamcorper-amet-feugiat-wisi-id-metus-ultrices-mauris-in-mattis/index.html">
+                                                @item.Description
+                                            </a>
+                                        </div>
+                                        <div class="pix-news-text">
+                                            <p>
+                                                @item.SubDescription
+                                            </p>
+                                        </div>
+                                        <div class="pix-news-btn">
+                                            <a href="category/car-design/index.html">
+                                                Car
+                                                design
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            }
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vc_row-full-width vc_clearfix"></div>
+
+
+        <div class="vc_row-full-width vc_clearfix"></div>
+        <div data-vc-full-width="true" data-vc-full-width-init="false"
+             class="vc_row wpb_row vc_row-fluid pix-top-no-padding pix-bottom-no-padding pix-row-overflow pix-top-offset_1621028024 text-white-color text-shadow default vc_custom_1574429985975 vc_row-has-fill vc_row-o-content-middle vc_row-flex">
+            <div class="wpb_column vc_column_container vc_col-sm-12 vc_hidden-xs">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper">
+                        <div class="vc_row wpb_row vc_inner vc_row-fluid pix-padding-top-m pix-padding-bottom-m pix-row-overflow pix-top-offset_433737972 default vc_custom_1574428218890 vc_row-has-fill vc_row-o-equal-height vc_row-o-content-middle vc_row-flex">
+                            <span class="vc_row-overlay"
+                                  style="background-color: rgba(0,0,0,0.9) !important;"></span>
+                            <div class="wpb_column vc_column_container vc_col-sm-3">
+                                <div class="vc_column-inner">
+                                    <div class="wpb_wrapper">
+                                        <div class="pix-section-title pix-l pix-title-no-padding text-left default">
+
+                                            <h2 class="pix-title-h2  ">
+                                                Contacts Us<span class="sep-element"></span>
+                                            </h2>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wpb_column vc_column_container vc_col-sm-3">
+                                <div class="vc_column-inner">
+                                    <div class="wpb_wrapper">
+                                        <div class="wpb_text_column wpb_content_element  vc_custom_1546001454388">
+                                            <div class="wpb_wrapper">
+                                                <p>
+                                                    <strong>
+                                                        <a style="font-size: 30px;" href="tel:+71002566566">
+                                                            +
+                                                            7 100 256 65 66
+                                                        </a>
+                                                    </strong>
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wpb_column vc_column_container vc_col-sm-4">
+                                <div class="vc_column-inner">
+                                    <div class="wpb_wrapper">
+                                        <div class="wpb_text_column wpb_content_element  vc_custom_1546001462965">
+                                            <div class="wpb_wrapper">
+                                                <p>
+                                                    <span style="font-size: 12px;">
+                                                        Rutrum ante tempus mauris
+                                                        facilisi, leo faucibus ac, egestas diamlorem malesuada,
+                                                        vitae mauris.
+                                                    </span>
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wpb_column vc_column_container vc_col-sm-2">
+                                <div class="vc_column-inner">
+                                    <div class="wpb_wrapper">
+                                        <div class="pix-button-container  pix-text-right ">
+                                            <a target="_self" href="#"
+                                               class="pix-button pix-font-m pix-h-m pix-v-s pix-transparent pix-dark pix-rounded ">
+                                                call
+                                                back
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vc_row-full-width vc_clearfix"></div>
+        <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true"
+             class="vc_row wpb_row vc_row-fluid pix-top-no-padding pix-bottom-no-padding default vc_row-no-padding">
+            <div class="wpb_column vc_column_container vc_col-sm-12">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper">
+
+                        <div class="pix-map-container">
+                            <a target=" _blank" href="contacts/index.html">
+                                <div id="pix-map"
+                                     style="background-image: url(wp-content/uploads/sites/3/2019/11/gmap-black2.jpg);">
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vc_row-full-width vc_clearfix"></div>
+    </div>
+</div>
+
+

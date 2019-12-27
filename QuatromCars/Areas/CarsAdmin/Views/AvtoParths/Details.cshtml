@@ -1,0 +1,99 @@
+﻿@model QuatromCars.Models.AvtoParth
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/CarsAdmin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AvtoParth</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City.CitName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City.CitName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PriceType.TypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PriceType.TypeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VIP.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VIP.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Photo)
+        </dt>
+
+        <dd style="width:25%">
+            <img src="@Model.Photo" class="img-thumbnail" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewOrOld)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewOrOld)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PublishDatte)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PublishDatte)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

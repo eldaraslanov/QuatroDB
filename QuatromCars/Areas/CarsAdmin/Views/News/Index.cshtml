@@ -1,0 +1,52 @@
+﻿@model IEnumerable<QuatromCars.Models.News>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/CarsAdmin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NewPhoto)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.CreateDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Description)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SubDescription)
+    </td>
+    <td style="width:25%">
+        <img class="img-thumbnail" src="@item.NewPhoto" />
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+        @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+    </td>
+</tr>
+}
+
+</table>

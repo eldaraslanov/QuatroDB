@@ -1,0 +1,334 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section mainCss{
+
+    <link href="~/PublicFront/wp-content/main-content/css/postelan.css" rel="stylesheet" />
+}
+
+<section class="main-post mt-lg-5 mt-md-0 mt-sm-0 m-0">
+
+    <section id="teltesdiq">
+        <div class="container">
+            <div class="">
+                <form id="regForm" action="@Url.Action("CheckPhone","ElanPost")" method="post">
+
+                <div class="tellabel form-group">
+                    <h2 for="example-tel-input" class="telH2 p-3"><b>Telefon nomresi daxil edin</b></h2>
+                    <div class="d-flex justify-content-center ">
+
+                        <select name="phoneType" class="form-control col-md-2 col-sm-2 col-lg-1 col-2 ">
+                            <option>050</option>
+                        </select>
+                        <input name="phone" required class="telcontrol form-control col-lg-2 col-md-3 col-sm-4 col-5" type="tel" placeholder="000-00-00" id="">
+                    </div>
+
+                    <small>adasdasdsa sdasfsadsad</small>
+                    <br>
+                    <br>
+
+                    <button data-btn='car-add' class="btn btn-outline-primary mr-3">MAŞIN ƏLAVƏ ET</button>
+                    <button data-btn="car-partadd" class="btn btn-outline-success ">AVTO HİSSƏ ƏLAVƏ ET</button>
+                </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+    <!-- /hisse1 -->
+    <!-- hisse2 -->
+    <section id="register">
+        <div class="reg-over"></div>
+        <div class="container">
+            <h2 class="p-2 pt-3"><b>Elan</b></h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="leftForm m-3">
+                        <label><b>Marka</b><abbr style="color:red;margin-left:5px;">*</abbr></label>
+                        <select class="form-control mb-2">
+                            <option>Default select</option>
+                        </select>
+                        <label><b>Marka</b><abbr style="color:red;margin-left:5px;">*</abbr></label>
+                        <select class="form-control mb-2 ">
+                            <option>Default select</option>
+                        </select>
+                        <label><b>Kategoriya</b><abbr style="color:red;margin-left:5px;">*</abbr></label>
+                        <select class="form-control mb-2 ">
+                            <option>Default select</option>
+                        </select>
+                        <label><b>Yürüş km</b><abbr style="color:red;margin-left:5px;">*</abbr></label>
+                        <input class="form-control mb-2" step="10000" type="number">
+
+                        <label><b>Buraxılış ili</b><abbr style="color:red;margin-left:5px;">*</abbr></label>
+                        <select class="form-control mb-2">
+                            <option>Default select</option>
+                        </select>
+                        <label><b>Qiymət</b><abbr style="color:red;margin-left:5px;">*</abbr></label>
+                        <input class="form-control mb-2" step="500" type="number">
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                            <label class="form-check-label" for="defaultCheck1">
+                                <b>Barter</b>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                <b>Kreditdedir</b>
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="leftForm m-3">
+                        <label><b>Yanacaq növü</b><abbr style="color:red;margin-left:5px;">*</abbr></label>
+                        <select class="form-control mb-2">
+                            <option>Default select</option>
+                        </select>
+                        <label><b>Sürət qutusu</b><abbr style="color:red;margin-left:5px;">*</abbr></label>
+                        <select class="form-control mb-2 ">
+                            <option>Default select</option>
+                        </select>
+                        <label class="string required control-label" for="auto_seller_name"><b>Oturucu</b> <abbr style="color:red">*</abbr></label>
+                        <select class="form-control mb-2 ">
+                            <option>Default select</option>
+                        </select>
+                        <label><b>Mühərrikin həcmi sm3</b><abbr style="color:red;margin-left:5px;">*</abbr></label>
+                        <select class="form-control mb-2 ">
+                            <option>Default select</option>
+                        </select>
+                        <label><b>Mühərrikin gücü at.g</b><abbr style="color:red;margin-left:5px;">*</abbr></label>
+                        <input class="form-control mb-2" step="1" type="number">
+
+
+                        <label><b>Rəng</b><abbr style="color:red;margin-left:5px;">*</abbr></label>
+                        <select class="form-control mb-2">
+                            <option>Default select</option>
+                        </select>
+                        <label><b>Şəhər</b><abbr style="color:red;margin-left:5px;">*</abbr></label>
+                        <select class="form-control mb-2 ">
+                            <option>Default select</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <h2 class="pb-3 pt-5"><b>Avtomobil Techizati</b></h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="avtechizat">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                <b>ABS</b>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                <b>Dəri salon</b>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                <b>Yüngül lehimli disklər</b>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                <b>Mərkəzi qapanma</b>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="avtechizat">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                <b>Kondisioner</b>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                <b>Oturacaqların isidilməsi</b>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                <b>Oturacaqların ventilyasiyası</b>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                <b>Lyuk</b>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="avtechizat">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                <b>Park radar</b>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                <b>Arxa görüntü kamerası</b>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                <b>Yağış sensoru</b>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                <b>Ksenon lampalar</b>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="avtechizat">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                <b>Yan pərdələr</b>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                <b>Airbag</b>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                <b>Cruise control</b>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 ">
+                    <h2 class="pb-2 pt-5"><b>Şəkillər</b></h2>
+                    <div class="addPhotoDescri p-2 ">
+                        <p><b>Minimum 5 şəkil (ön, arxa, sag, sol və bütöv ön panelin görüntüsü mütləqdir).</b></p>
+                        <p><b>Maksimum 16 şəkil.</b></p>
+                        <p><b>Şəkillər yaxşı keyfiyyətdə olmalıdır. Nəqliyyat vasitəsi yaxşı işıqlandırılmış olmalı, şəkillərin üzərində yazılar olmamalıdır. Skrinşotlar qəbul olunmur.</b></p>
+                    </div>
+                </div>
+                <div class="col-lg-12 mt-5">
+                    <div class="form-group">
+                        <label style="color:aliceblue" for="comment"><b>Etrafli melumat:</b></label>
+                        <textarea placeholder="Burada yazin..." class="form-control" rows="5" id="comment"></textarea>
+                    </div>
+                </div>
+                <div class=" col-lg-12">
+                    <h2 class="new-product--title pb-2 pt-5"><b>Əlaqə</b></h2>
+
+                    <label for="staticUserName" class="col-sm-5 col-md-5 col-lg-3 col-5 text-white"><b>Ad ve Soyad</b><abbr style="color:red;margin-left:5px;">*</abbr></label>
+                    <div class="col-sm-5 col-md-5 col-lg-3 col-5">
+                        <input type="text" readonly class="form-control" id="staticUserName" value="Ad Soyad">
+                    </div>
+                </div>
+                <br>
+                <div class="col-lg-12 mt-3">
+                    <label for="staticEmail" class="control-label col-sm-5 col-md-5 col-lg-3 col-5 text-white"><b>Email</b><abbr style="color:red;margin-left:5px;">*</abbr></label>
+                    <div class="col-sm-5 col-md-5 col-lg-3 col-5">
+                        <input type="text" readonly class="form-control" id="staticEmail" value="email@example.com">
+                    </div>
+                </div>
+                <div class="btndiv m-5 p-5">
+                    <h3><b>Pulsuz Elan</b></h3>
+                    <label>
+                        <b>Siz bir vəya daha cox elanı pulsuz yerləşdirə bilərsiz.</b>
+                    </label>
+                    <div class="section one">
+                        <div id="button" class="btn">
+                            <p class="text-re"><b>Elanı yerləşdir</b></p>
+                            <div class="ring one"></div>
+                            <div class="ring two"></div>
+                            <div class="ring three"></div>
+                            <div class="ring four"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="reg-active pb-5" id="registerAvtoParths">
+        <div class="container">
+            <h2 class="p-2 pt-3 text-white"><b>Elan</b></h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="AvtoparthForm m-3 text-white">
+                        <label><b>Şəhər</b><abbr style="color:red;margin-left:5px;">*</abbr></label>
+                        <select class="form-control mb-2 ">
+                            <option>Default select</option>
+                        </select>
+                        <label><b>Kategoriya</b><abbr style="color:red;margin-left:5px;">*</abbr></label>
+                        <select class="form-control mb-2 ">
+                            <option>Default select</option>
+                        </select>
+                        <label><b>Qiymət</b><abbr style="color:red;margin-left:5px;">*</abbr></label>
+                        <select class="form-control mb-2 ">
+                            <option>Default select</option>
+                        </select>
+                        <label for="staticUserName" class="text-white"><b>Ad ve Soyad</b><abbr style="color:red;margin-left:5px;">*</abbr></label>
+                        <input type="text" readonly class="form-control" id="staticUserName" value="Ad Soyad">
+
+                        <label for="staticEmail" class="control-label mt-2 text-white"><b>Email</b><abbr style="color:red;margin-left:5px;">*</abbr></label>
+                        <input type="text" readonly class="form-control" id="staticEmail" value="email@example.com">
+
+                        <div class=" mt-5 ">
+                            <div class="form-group">
+                                <label style="color:aliceblue" for="comment"><b>Etrafli melumat:</b></label>
+                                <textarea placeholder="Burada yazin..." class="form-control" rows="5" id="comment"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6"></div>
+            </div>
+            <div class="btndiv col-md-5 ml-3 p-4 ">
+                <h3><b>Pulsuz Elan</b></h3>
+                <label>
+                    <b>Siz bir vəya daha cox elanı pulsuz yerləşdirə bilərsiz.</b>
+                </label>
+
+                <div class="section one">
+                    <div id="button" class="btn">
+                        <p class="text-re btn"><b>Elanı yerləşdir</b></p>
+                        <div class="ring one"></div>
+                        <div class="ring two"></div>
+                        <div class="ring three"></div>
+                        <div class="ring four"></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+</section>
+
+@section mainJs{
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/PublicFront/wp-content/main-content/js/postelan.js"></script>
+}

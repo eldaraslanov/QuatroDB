@@ -1,0 +1,51 @@
+﻿@model QuatromCars.Models.SliderTop
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/CarsAdmin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SliderTop</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Header)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Header)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descriptions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descriptions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubDescriptions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubDescriptions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SliderPhoto)
+        </dt>
+
+        <dd style="width:25%">
+            <img src="@Model.SliderPhoto" class="img-thumbnail" alt="Alternate Text" />
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

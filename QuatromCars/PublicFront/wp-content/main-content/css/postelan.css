@@ -1,0 +1,199 @@
+﻿* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: black;
+}
+#teltesdiq {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.8))), url(../wexsi/back.jpg);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0.8) 100%), url(/uploads/269.jpg);
+}
+
+    #teltesdiq .tellabel {
+        text-align: center;
+        color: beige;
+        padding: 15px 0;
+    }
+
+    #teltesdiq .telcontrol {
+        text-align: center;
+    }
+
+html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.one {
+    top: 0px;
+    left: 0px;
+}
+
+    .one #button {
+        padding: 10px 15px;
+        color: #f6f6f6;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.2em;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(0%, 0%);
+        transform: translate(0%, 0%);
+        border: red 2px solid;
+        border-radius: 5px;
+        overflow: hidden;
+        -webkit-transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+        transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+        cursor: pointer;
+        -webkit-box-shadow: 0px 0px 0px #fff;
+        box-shadow: 0px 0px 0px #fff;
+    }
+
+        .one #button .text-re {
+            color: beige;
+            margin: 0;
+        }
+
+        .one #button:hover {
+            text-shadow: 0px 8px 6px rgba(0, 0, 0, 0.9);
+            -webkit-box-shadow: 8px 8px 0px #fff, -8px -8px 0px #fff;
+            box-shadow: 8px 8px 0px #fff, -8px -8px 0px #fff;
+        }
+
+            .one #button:hover .one {
+                opacity: 1;
+                -webkit-transform: translate3d(0px, 0px, 0px);
+                transform: translate3d(0px, 0px, 0px);
+            }
+
+            .one #button:hover .two {
+                -webkit-transform: translate3d(0px, 0px, 0px);
+                transform: translate3d(0px, 0px, 0px);
+            }
+
+            .one #button:hover .three {
+                -webkit-transform: translate3d(0px, 0px, 0px);
+                transform: translate3d(0px, 0px, 0px);
+            }
+
+            .one #button:hover .four {
+                -webkit-transform: translate3d(0px, 0px, 0px);
+                transform: translate3d(0px, 0px, 0px);
+            }
+
+        .one #button .ring {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: transparent;
+            top: 0;
+            left: 0;
+            -webkit-transform: translate3d(0px, 90px, 0px);
+            transform: translate3d(0px, 90px, 0px);
+        }
+
+        .one #button .one {
+            background-color: #FE6B26;
+            -webkit-transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+            transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+            z-index: -3;
+            z-index: -4;
+        }
+
+        .one #button .two {
+            background-color: rgba(236, 225, 119, 0.726);
+            -webkit-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+            transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+            z-index: -3;
+        }
+
+        .one #button .three {
+            background-color: red;
+            z-index: -2;
+            -webkit-transition: all 0.7s cubic-bezier(0.55, 0, 0.1, 1);
+            transition: all 0.7s cubic-bezier(0.55, 0, 0.1, 1);
+            z-index: -3;
+        }
+
+        .one #button .four {
+            background-color: black;
+            z-index: -1;
+            -webkit-transition: all 0.9s cubic-bezier(0.55, 0, 0.1, 1);
+            transition: all 0.9s cubic-bezier(0.55, 0, 0.1, 1);
+            z-index: -3;
+        }
+
+.reg-active {
+    display: none;
+}
+
+#register {
+    position: relative;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.8))), url(../wexsi/back.jpg);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0.8) 100%), url(/uploads/269.jpg);
+}
+
+    #register .reg-over {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 50;
+        height: 100%;
+        width: 100%;
+        background: #fff;
+        opacity: .9;
+    }
+
+    #register input[type=checkbox] {
+        -webkit-transform: scale(1.4);
+        transform: scale(1.4);
+    }
+
+    #register .leftForm label {
+        color: beige;
+    }
+
+    #register .avtechizat label {
+        color: beige;
+    }
+
+    #register h2 {
+        color: beige;
+    }
+
+    #register .addPhotoDescri {
+        border-left: red 6px solid;
+        border-radius: 5px;
+    }
+
+        #register .addPhotoDescri p {
+            font-size: large;
+            color: beige;
+        }
+
+    #register .btndiv {
+        border: red 2px solid;
+        border-radius: 20px 0;
+        color: beige;
+    }
+
+#registerAvtoParths {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.8))), url(../wexsi/back.jpg);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0.8) 100%), url(/uploads/269.jpg);
+}
+
+.btndiv {
+    border: red 2px solid;
+    border-radius: 20px 0;
+    color: beige;
+}
+/*# sourceMappingURL=style.css.map */

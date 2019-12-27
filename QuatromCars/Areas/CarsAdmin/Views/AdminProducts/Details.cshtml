@@ -1,0 +1,195 @@
+﻿@model QuatromCars.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/CarsAdmin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City.CitName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City.CitName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FuelType.FuelName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FuelType.FuelName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MotorsCapacity.Capacity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MotorsCapacity.Capacity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PriceType1.TypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PriceType1.TypeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductColor.ColorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductColor.ColorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Transmission.TypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Transmission.TypeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VIP.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VIP.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Photo)
+        </dt>
+
+        <dd style="width:25%">
+            <img src="@Model.Photo" class="img-thumbnail" alt="Alternate Text" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewOrOld)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewOrOld)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Published)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Published)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsActive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductionDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductionDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrublishDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrublishDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PinNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PinNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsCredit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsCredit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isBarter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isBarter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HorsePower)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HorsePower)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<QuatromCars.Models.SliderTop>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/CarsAdmin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2><br />
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Header)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descriptions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubDescriptions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SliderPhoto)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Header)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descriptions)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubDescriptions)
+        </td>
+        <td style="width:25%">
+            <img class="img-thumbnail" src="@item.SliderPhoto" />
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
